@@ -5,31 +5,44 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-slides pager="true">
-
-  <ion-slide>
-    <img src="img/slide1.png" />
-  </ion-slide>
-
-  <ion-slide>
-    <img src="images/slide2.png" />
-  </ion-slide>
-
-  <ion-slide>
-    <img src="images/slide3.png" />
-  </ion-slide>
-
-  <ion-slide>
-    <ion-row>
-      <ion-col>
-        <img src="images/slide4.png" />
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <button ion-button color="light" (click)="goToHome()">Start Using My App</button>
-      </ion-col>
-    </ion-row>
-  </ion-slide>
-
-</ion-slides>
+<script id="templates/home.html" type="text/ng-template">
+  <ion-view view-title="Home">
+    <ion-content class="padding">
+      <ion-slide-box on-slide-changed="slideChanged($slideIndex)">
+      <ion-slide>
+        <h3>Thank you for choosing the Awesome App!</h3>
+        <div id="logo">
+          <img src="https://code.ionicframework.com/assets/img/app_icon.png">
+        </div>
+        <p>
+          We've worked super hard to make you happy.
+        </p>
+        <p>
+          But if you are angry, too bad.
+        </p>
+      </ion-slide>
+      <ion-slide>
+        <h3>Using Awesome</h3>
+        
+        <div id="list">
+          <h5>Just three steps:</h5>
+          <ol>
+            <li>Be awesome</li>
+            <li>Stay awesome</li>
+            <li>There is no step 3</li>
+          </ol>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <h3>Any questions?</h3>
+        <p>
+          Too bad!
+        </p>
+      </ion-slide>
+    </ion-slide-box>
+      <p>
+        <a class="button icon icon-right ion-chevron-right" href="#/tab/facts">Scientific Facts</a>
+      </p>
+    </ion-content>
+  </ion-view>
+</script>
